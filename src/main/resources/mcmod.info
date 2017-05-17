@@ -1,0 +1,14 @@
+[{
+	"modid": "bluemushroom",
+	"name": "Don't Eat the Blue Mushrooms",
+	"description": "",
+	"mcversion": "${mcversion}",
+	"version": "${version}",
+	"url": "",
+	"updateUrl": "",
+	"authorList": ["csb987"],
+	"credits": "",
+	"logoFile": "",
+	"screenshots": [],
+	"dependencies": []
+}]
