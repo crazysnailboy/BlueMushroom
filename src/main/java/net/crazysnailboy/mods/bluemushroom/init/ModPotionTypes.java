@@ -3,6 +3,7 @@ package net.crazysnailboy.mods.bluemushroom.init;
 import net.minecraft.init.MobEffects;
 import net.minecraft.init.PotionTypes;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
@@ -20,7 +21,7 @@ public class ModPotionTypes
 
 	public static void registerBrewingRecipes()
 	{
-		PotionHelper.registerPotionTypeConversion(PotionTypes.AWKWARD, new PotionHelper.ItemPredicateInstance(Item.getItemFromBlock(ModBlocks.BLUE_MUSHROOM)), BLINDNESS);
+		PotionHelper.func_193356_a(PotionTypes.AWKWARD, Ingredient.func_193368_a(Item.getItemFromBlock(ModBlocks.BLUE_MUSHROOM)), BLINDNESS);
 	}
 
 }
