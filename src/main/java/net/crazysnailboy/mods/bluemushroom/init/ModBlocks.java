@@ -11,7 +11,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+
 
 public class ModBlocks
 {
@@ -23,26 +24,18 @@ public class ModBlocks
 
 	public static void registerBlocks()
 	{
-		GameRegistry.register(BLUE_MUSHROOM);
-		GameRegistry.register(new ItemBlockMushroom(BLUE_MUSHROOM).setRegistryName(BLUE_MUSHROOM.getRegistryName()));
+		ForgeRegistries.BLOCKS.register(BLUE_MUSHROOM);
+		ForgeRegistries.ITEMS.register(new ItemBlockMushroom(BLUE_MUSHROOM).setRegistryName(BLUE_MUSHROOM.getRegistryName()));
 
-		GameRegistry.register(BLUE_MUSHROOM_BLOCK);
-		GameRegistry.register(new ItemBlockHugeMushroom(BLUE_MUSHROOM_BLOCK).setRegistryName(BLUE_MUSHROOM_BLOCK.getRegistryName()));
+		ForgeRegistries.BLOCKS.register(BLUE_MUSHROOM_BLOCK);
+		ForgeRegistries.ITEMS.register(new ItemBlockHugeMushroom(BLUE_MUSHROOM_BLOCK).setRegistryName(BLUE_MUSHROOM_BLOCK.getRegistryName()));
 	}
 
-
-	public static void registerBlockVariants()
-	{
-	}
 
 	public static void registerInventoryModels()
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(BLUE_MUSHROOM), 0, new ModelResourceLocation(BLUE_MUSHROOM.getRegistryName(), "inventory"));
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(BLUE_MUSHROOM_BLOCK), 0, new ModelResourceLocation(BLUE_MUSHROOM_BLOCK.getRegistryName(), "inventory"));
-	}
-
-	public static void registerCraftingRecipes()
-	{
 	}
 
 }

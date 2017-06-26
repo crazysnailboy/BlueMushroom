@@ -2,6 +2,7 @@ package net.crazysnailboy.mods.bluemushroom.proxy;
 
 import net.crazysnailboy.mods.bluemushroom.init.ModBlocks;
 
+
 public class ClientProxy extends CommonProxy
 {
 
@@ -15,7 +16,6 @@ public class ClientProxy extends CommonProxy
 	public void init()
 	{
 		super.init();
-		registerBlockVariants();
 		registerInventoryModels();
 	}
 
@@ -25,11 +25,6 @@ public class ClientProxy extends CommonProxy
 		super.postInit();
 	}
 
-
-	private void registerBlockVariants()
-	{
-		ModBlocks.registerBlockVariants();
-	}
 
 	private void registerInventoryModels()
 	{

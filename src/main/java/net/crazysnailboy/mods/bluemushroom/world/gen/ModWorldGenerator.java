@@ -14,6 +14,7 @@ import net.minecraft.world.gen.feature.WorldGenBush;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
+
 public class ModWorldGenerator implements IWorldGenerator
 {
 
@@ -28,9 +29,15 @@ public class ModWorldGenerator implements IWorldGenerator
 
 		switch (world.provider.getDimension())
 		{
-			case -1: generateNether(world, random, blockX, blockZ); break;
-			case 0: generateOverworld(world, random, blockX, blockZ); break;
-			case 1: generateEnd(world, random, blockX, blockZ); break;
+			case -1:
+				generateNether(world, random, blockX, blockZ);
+				break;
+			case 0:
+				generateOverworld(world, random, blockX, blockZ);
+				break;
+			case 1:
+				generateEnd(world, random, blockX, blockZ);
+				break;
 		}
 	}
 
@@ -79,7 +86,7 @@ public class ModWorldGenerator implements IWorldGenerator
 					int l11 = rand.nextInt(16) + 8;
 					BlockPos blockpos2 = world.getHeight(this.chunkPos.add(i8, 0, l11));
 
-					System.out.println( blockpos2.toString() );
+					System.out.println(blockpos2.toString());
 
 					mushroomBlueGen.generate(world, rand, blockpos2);
 				}
