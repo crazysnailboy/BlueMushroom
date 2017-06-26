@@ -2,6 +2,9 @@ package net.crazysnailboy.mods.bluemushroom.proxy;
 
 import net.crazysnailboy.mods.bluemushroom.init.ModBlocks;
 import net.crazysnailboy.mods.bluemushroom.init.ModPotionTypes;
+import net.crazysnailboy.mods.bluemushroom.world.gen.ModWorldGenerator;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
 
 public class CommonProxy
 {
@@ -14,7 +17,8 @@ public class CommonProxy
 
 	public void init()
 	{
-		registerCraftingRecipes();
+		registerBrewingRecipes();
+		registerWorldGenerators();
 	}
 
 	public void postInit()
@@ -27,15 +31,19 @@ public class CommonProxy
 		ModBlocks.registerBlocks();
 	}
 
-	private void registerCraftingRecipes()
+	private void registerBrewingRecipes()
 	{
-		ModBlocks.registerCraftingRecipes();
 		ModPotionTypes.registerBrewingRecipes();
 	}
 
 	private void registerPotionTypes()
 	{
 		ModPotionTypes.registerPotionTypes();
+	}
+
+	private void registerWorldGenerators()
+	{
+		GameRegistry.registerWorldGenerator(new ModWorldGenerator(), 0);
 	}
 
 }

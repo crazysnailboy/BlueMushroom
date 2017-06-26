@@ -8,8 +8,10 @@ import net.minecraft.potion.PotionHelper;
 import net.minecraft.potion.PotionType;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+
 public class ModPotionTypes
 {
+
 	public static final PotionType BLINDNESS = new PotionType("blindness", new PotionEffect[] { new PotionEffect(MobEffects.BLINDNESS, 3600) }).setRegistryName("blindness");
 
 

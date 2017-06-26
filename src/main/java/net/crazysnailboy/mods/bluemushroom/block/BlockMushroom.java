@@ -9,8 +9,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+
 public class BlockMushroom extends net.minecraft.block.BlockMushroom
 {
+
 	public BlockMushroom()
 	{
 		super();

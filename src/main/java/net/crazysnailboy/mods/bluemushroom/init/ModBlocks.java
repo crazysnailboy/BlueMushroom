@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
+
 public class ModBlocks
 {
 
@@ -31,18 +32,10 @@ public class ModBlocks
 	}
 
 
-	public static void registerBlockVariants()
-	{
-	}
-
 	public static void registerInventoryModels()
 	{
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(BLUE_MUSHROOM), 0, new ModelResourceLocation(BLUE_MUSHROOM.getRegistryName(), "inventory"));
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(BLUE_MUSHROOM_BLOCK), 0, new ModelResourceLocation(BLUE_MUSHROOM_BLOCK.getRegistryName(), "inventory"));
-	}
-
-	public static void registerCraftingRecipes()
-	{
 	}
 
 }
